@@ -26,15 +26,16 @@
         </p>
         <div class="flex gap-4 mt-10">
           <button
-            class="font-medium text-[16px] flex items-center px-5 py-3 md:py-4 md:px-8 rounded-xl capitalize bg-gradient-to-r from-orange-300 to-orange-500 hover:from-pink-500 hover:to-yellow-500 relative gap-2 transition duration-300 hover:scale-105 text-white shadow-glass"
+            class="font-medium text-[16px] flex items-center rounded-xl capitalize bg-gradient-to-r from-orange-300 to-orange-500 hover:from-pink-500 hover:to-yellow-500 relative gap-2 transition duration-300 hover:scale-105 text-white shadow-glass"
           >
-            Get In Touch
+            <RouterLink to="/dash" class="px-5 py-3 md:py-4 md:px-8">
+              Get In Touch
+            </RouterLink>
             <span
               class="animate-ping absolute right-0 top-0 w-3 h-3 rounded-full bg-gradient-to-r from-orange -400 to-orange-700"
             ></span>
           </button>
           <RiFacebookFill class="" />
-          <SiBehance />
         </div>
       </div>
       <div class="relative sm:mt-0 mt-10 px-6 sm:px-0">

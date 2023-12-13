@@ -1,10 +1,15 @@
 <script setup lang="ts">
-const mainMenu: string[] = ["Home", "About", "Contact"];
+type menuType = { label: string; link: string };
+const mainMenu: menuType[] = [
+  { label: "Home", link: "/" },
+  { label: "About", link: "/about" },
+  { label: "Contact", link: "/contact" },
+];
 </script>
 <template>
   <!-- component -->
   <header
-    class="header sticky top-0 bg-white shadow-md flex items-center justify-between px-8 py-02"
+    class="header sticky top-0 bg-white flex items-center justify-between px-8 py-02"
   >
     <!-- logo -->
     <h1 class="w-3/12">
@@ -32,9 +37,11 @@ const mainMenu: string[] = ["Home", "About", "Contact"];
       <ul class="flex items-center">
         <li
           v-for="item in mainMenu"
-          class="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer active"
+          class="border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer active"
         >
-          <a href="">{{ item }}</a>
+          <router-link class="p-4 inline-block" :to="item.link">{{
+            item.label
+          }}</router-link>
         </li>
       </ul>
     </nav>
@@ -42,15 +49,26 @@ const mainMenu: string[] = ["Home", "About", "Contact"];
     <!-- buttons --->
     <div class="w-3/12 flex justify-end gap-x-2">
       <button
-        class="border-2 border-blue-400 bg-blue-600 text-white rounded-md py-1 px-4"
+        class="border-2 border-blue-400 bg-blue-600 text-white rounded-md"
       >
-        Login
+        <router-link to="/auth/login" class="inline-block px-4 py-1">
+          Login
+        </router-link>
       </button>
       <button
-        class="rounded-md py-1 px-4 border-2 border-black hover:bg-blue-500 transition"
+        class="rounded-md border-2 border-black hover:bg-blue-500 transition"
       >
-        Sign Up
+        <router-link to="/auth/sign-up" class="inline-block px-4 py-1">
+          Sign Up
+        </router-link>
       </button>
     </div>
   </header>
 </template>
+<style scoped>
+header {
+  backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
+  background: rgba(255, 255, 255, 0.537);
+  z-index: 1000;
+}
+</style>

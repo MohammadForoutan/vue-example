@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import NotFound404 from "../../components/Home/NotFound404.vue";
 import HomeLayout from "../../layout/HomeLayout.vue";
-import AboutUs from "../../components/Home/AboutUs.vue";
 </script>
 <template>
   <HomeLayout>
-    <AboutUs />
+    <NotFound404 />
   </HomeLayout>
 </template>

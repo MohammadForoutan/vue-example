@@ -29,7 +29,7 @@
             class="font-medium text-[16px] flex items-center rounded-xl capitalize bg-gradient-to-r from-orange-300 to-orange-500 hover:from-pink-500 hover:to-yellow-500 relative gap-2 transition duration-300 hover:scale-105 text-white shadow-glass"
           >
             <RouterLink to="/dash" class="px-5 py-3 md:py-4 md:px-8">
-              Get In Touch
+              Get In Touch - Go to dashboard !!!
             </RouterLink>
             <span
               class="animate-ping absolute right-0 top-0 w-3 h-3 rounded-full bg-gradient-to-r from-orange -400 to-orange-700"

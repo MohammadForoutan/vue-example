@@ -7,7 +7,7 @@ import DashHeader from "../components/Dashboard/DashHeader.vue";
     <DashNav />
     <div class="grow">
       <DashHeader />
-      <div class="p-4">
+      <div class="p-4 fade-in">
         <slot />
       </div>
     </div>

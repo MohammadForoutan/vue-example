@@ -14,6 +14,7 @@ const todos = ref<TTodo[]>([
 ]);
 
 const addTodo = () => {
+  if(todoTitleInput.value === "") return;
   todos.value.push({
     id: todos.value.length + 1,
     title: todoTitleInput.value,
